@@ -33,6 +33,7 @@
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
     </script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <style>
     /* the superGifCanvas elements can be styled if you need to*/
@@ -77,7 +78,7 @@
     }
   </style>
   <body>
-    <div id="ttsoptions">
+    <div id="ttsoptions" style="display: none;">
       <div>
         <label>Voice:</label>
         <select id="voiceSelecter" class="guioption"></select>
@@ -106,7 +107,9 @@
       <!-- <div id="giferrormessage" class="guierrormessage"></div> -->
     </div>
 
-    <div id="instructions">Click on the image below to hear the message.</div>
+    <div id="instructions" style="display: none;">
+      Click on the image below to hear the message.
+    </div>
     <script type="text/javascript"></script>
     <div>
       <a href="javascript:playsyncronized()">
