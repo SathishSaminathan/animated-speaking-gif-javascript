@@ -15,6 +15,24 @@
       content="Example of using GIF files to bring text to speech voices to life in your browser."
     />
     <script type="text/javascript" src="./libgif.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <!-- include firebase database -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-database.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyAenCnJ8b81p9P4XrmYaWAVtn2SbjwDn48",
+        authDomain: "sachu-react.firebaseapp.com",
+        databaseURL: "https://sachu-react.firebaseio.com",
+        projectId: "sachu-react",
+        storageBucket: "sachu-react.appspot.com",
+        messagingSenderId: "677327255203",
+        appId: "1:677327255203:web:fbad08bd1b333a51d1f116",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
   </head>
   <style>
     /* the superGifCanvas elements can be styled if you need to*/
@@ -59,8 +77,6 @@
     }
   </style>
   <body>
-    <center></center>
-		
     <div id="ttsoptions">
       <div>
         <label>Voice:</label>
@@ -73,8 +89,8 @@
         id="texttospeakinput"
         value="Pretty cool. I didn't know gifs could talk."
         class="guioption"
-		onClick="this.setSelectionRange(0, this.value.length)"
-		style="display: none;"
+        onClick="this.setSelectionRange(0, this.value.length)"
+        style="display: none;"
       />
       <div id="texterrormessage" class="guierrormessage"></div>
     </div>
@@ -111,8 +127,9 @@
 		<div><a href="https://github.com/talkr-app/gif-talkr">Github Project</a></div>
 		<div><a href="https://imgur.com/a/NRZVQ">Sample GIFs</a></div>
 		<div><a href="https://talkrapp.com">Talkr</a></div> -->
-	  <script type="text/javascript" src="./example.js"></script>
-	  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <script type="text/javascript" src="./example.js"></script>
+      <script type="text/javascript" src="./fb.js"></script>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     </div>
     <!-- </center> -->
   </body>
