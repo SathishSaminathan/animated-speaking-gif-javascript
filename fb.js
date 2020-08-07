@@ -12,7 +12,8 @@ function getParameterByName(name, url) {
 
 const dbRef = firebase.database().ref();
 // const usersRef = dbRef.child("bot");
-const usersRef = dbRef.child(getParameterByName("key"));
+const usersRef = dbRef.child("bot");
+// const usersRef = dbRef.child(getParameterByName("key"));
 // console.log("print ip", getParameterByName("key"));
 usersRef.on("child_changed", (snap) => {
   let user = snap.val();
